@@ -51,21 +51,21 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 
 */
 
-#define USB_SERIAL_CDC      1 // 1 for Arduino class library and 2 for PJRC C library. Comment out to use UART communication.
-#define SAFETY_DOOR_ENABLE  0 // Enable safety door input.
+#define USB_SERIAL_CDC        1 // 1 for Arduino class library and 2 for PJRC C library. Comment out to use UART communication.
+#define SAFETY_DOOR_ENABLE    0 // Enable safety door input.
 //#define USB_SERIAL_WAIT     1 // Wait for USB connection before starting grblHAL.
 //#define BLUETOOTH_ENABLE    1 // Set to 1 for HC-05 module. Requires and claims one auxillary input pin.
-#define VFD_ENABLE          -1 // Set to 1 or 2 for Huanyang VFD spindle. More here https://github.com/grblHAL/Plugins_spindle
-#define MODBUS_ENABLE       1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
+#define VFD_ENABLE           -1 // Set to 1 or 2 for Huanyang VFD spindle. More here https://github.com/grblHAL/Plugins_spindle
+#define MODBUS_ENABLE         1 // Set to 1 for auto direction, 2 for direction signal on auxillary output pin.
 //#define WEBUI_ENABLE        3 // Enable ESP3D-WEBUI plugin along with networking and SD card plugins.
-#define ETHERNET_ENABLE     1 // Ethernet streaming. Enables networking plugin.
+#define ETHERNET_ENABLE       1 // Ethernet streaming. Enables networking plugin.
 //#define SDCARD_ENABLE       1 // Run gcode programs from SD card, enables sdcard plugin.
 //#define LITTLEFS_ENABLE     1 // Enable flash based storage, automatically enabled if WebUI is enabled.
 //#define QEI_ENABLE          1 // Enable quadrature encoder interfaces. Max value is 1. Requires encoder plugin.
 //#define MPG_ENABLE          1 // Enable MPG interface. Requires serial port and one handshake pin unless
                                 // KEYPAD_ENABLE is set to 2 when mode switching is done by the CMD_MPG_MODE_TOGGLE (0x8B)
                                 // command character. Set both MPG_ENABLE and KEYPAD_ENABLE to 2 to use a handshake pin anyway.
-#define KEYPAD_ENABLE       1 // Set to 1 for I2C keypad, 2 for other input such as serial data. If KEYPAD_ENABLE is set to 2
+#define KEYPAD_ENABLE         1 // Set to 1 for I2C keypad, 2 for other input such as serial data. If KEYPAD_ENABLE is set to 2
                                 // and MPG_ENABLE is uncommented then a serial stream is shared with the MPG.
 //#define PLASMA_ENABLE       1 // Plasma/THC plugin. To be completed.
 //#define MCP3221_ENABLE      1 // Enable analog input via MCP3221 ADC.
@@ -85,8 +85,8 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 // of axes can be enabled here.
 //#define X_GANGED            1
 //#define X_AUTO_SQUARE       1
-#define Y_GANGED            1
-#define Y_AUTO_SQUARE       1
+#define Y_GANGED              1
+#define Y_AUTO_SQUARE         1
 //#define Z_GANGED            1
 //#define Z_AUTO_SQUARE       1
 // For ganged axes the limit switch input (if available) can be configured to act as a max travel limit switch.
@@ -96,17 +96,19 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define Z_GANGED_LIM_MAX    1
 //
 
+#define DUAL_SPINDLE 0
+
 #if ETHERNET_ENABLE > 0
-#define TELNET_ENABLE           1 // Telnet daemon - requires Ethernet streaming enabled.
-#define WEBSOCKET_ENABLE        1 // Websocket daemon - requires Ethernet streaming enabled.
+#define TELNET_ENABLE         1 // Telnet daemon - requires Ethernet streaming enabled.
+#define WEBSOCKET_ENABLE      1 // Websocket daemon - requires Ethernet streaming enabled.
 #ifdef SDCARD_ENABLE
-//#define FTP_ENABLE              1 // Ftp daemon - requires SD card enabled
-//#define HTTP_ENABLE             1 // http daemon - requires SD card enabled.
+//#define FTP_ENABLE          1 // Ftp daemon - requires SD card enabled
+//#define HTTP_ENABLE         1 // http daemon - requires SD card enabled.
 //#define WEBDAV_ENABLE           1 // webdav protocol - requires http daemon and SD card enabled.
 #endif
 // The following symbols have the default values as shown, uncomment and change as needed.
 //#define NETWORK_HOSTNAME        "GRBL"
-#define NETWORK_IPMODE          0 // 0 = static, 1 = DHCP, 2 = AutoIP
+#define NETWORK_IPMODE            0 // 0 = static, 1 = DHCP, 2 = AutoIP
 //#define NETWORK_IP              "192.168.5.1"
 //#define NETWORK_GATEWAY         "192.168.5.1"
 //#define NETWORK_MASK            "255.255.255.0"
