@@ -74,7 +74,6 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define OPENPNP_ENABLE      1 // OpenPNP plugin. To be completed.
 //#define FANS_ENABLE         1 // Enable fan control via M106/M107. Enables fans plugin.
 #define RGB_ENABLE 1
-#define DUAL_SPINDLE 1
 //#define EEPROM_ENABLE       1 // I2C EEPROM support. Set to 1 for 24LC16 (2K), 3 for 24C32 (4K - 32 byte page) and 2 for other sizes. Enables eeprom plugin.
 //#define EEPROM_IS_FRAM      1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 //#define SPINDLE_SYNC_ENABLE 1 // Enable spindle sync support (G33, G76). !! NOTE: Alpha quality - enable only for test or verification.
